@@ -2,8 +2,12 @@ import json
 import urllib
 
 def handle(req):
+    # Get the input value
     urlstring = urllib.unquote(req).decode('utf8').strip('payload=')
+    # Convert the JSON object input into a Python Dictionary
     response = json.loads(urlstring)
+    # Different values can be returned based on the response value
+    # Declare the output value
     data = {
         "attachments": [
             {
@@ -26,4 +30,5 @@ def handle(req):
             }
         ]
     }
+    # Return the output value to the requester as a JSON object
     return json.dumps(data)

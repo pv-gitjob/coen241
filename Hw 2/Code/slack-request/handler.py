@@ -1,6 +1,8 @@
 import json
 
 def handle(req):
+    # No input is read
+    # Declare the output value
     data = {
         "text": "Serverless Message",
         "attachments": [{
@@ -40,4 +42,5 @@ def handle(req):
             ]
         }]
     }
+    # Return the output value to the requester as a JSON object
     return json.dumps(data)
