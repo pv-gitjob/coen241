@@ -3,25 +3,33 @@ All screenshots are in "Screenshots.pdf"
 ● Provide a screenshot of invoking the figlet function (10 pts)
 Page 1
 faas-cli by echoing input, curl by posting input as text, and openfaas ui
+echo "Praveen Vandeyar" | faas-cli invoke figlet
+curl 127.0.0.1:8080/function/figlet -H 'Content-Type: text/html' -d 'Praveen Vandeyar'
 
 ● Provide a screenshot of running the following command (10 pts) 
    sudo journalctl -u faasd --lines 40
 Page 2
 systemd journal of faasd process
+sudo journalctl -u faasd --lines 40
 
 ● Provide a screenshot of your OpenFaaS gateway AFTER deploying figlet, slack-handler and slack-interactive functions (10 pts) 
 Page 3 - Page 4
 the openfaas ui on port 8080
+http://ec2-54-215-117-138.us-west-1.compute.amazonaws.com:8080/
 
 ● Provide a screenshot of invoking slack-request and slack-interactive functions (10 pts) 
 Page 5 - Page 6
 request: faas-cli by echoing empty string, curl with no input, and openfaas ui
 interactive: faas-cli by echoing input, curl by posting input as json, and openfaas ui
+echo "" | faas-cli invoke slack-request
+curl 127.0.0.1:8080/function/slack-request
+echo '{"json": "object"}' | faas-cli invoke slack-interactive
+curl 127.0.0.1:8080/function/slack-interactive -H 'Content-Type: application/json' -d '{"json": "object"}'
 
 ● Provide the link to your application and a screenshot of you running your application inside slack for the full credit!
 https://join.slack.com/t/cloud-hw2/shared_invite/zt-yh18x9oy-PwvUZnK0qJALSKJ KFiIsog
 Page 7 - Page 10
-application name: hw2-extra-credit
-workspace running the application: cloud-hw2
-channel that the application posts to: extra-credit
-command to invoke application: /coen241
+Application name: hw2-extra-credit
+Workspace running the application: cloud-hw2
+Channel that the application posts to: extra-credit
+Command to invoke application: /coen241
