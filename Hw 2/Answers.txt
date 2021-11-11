@@ -57,5 +57,14 @@ based on the response variable and return different “data” for each conditio
 then redeploy the function.
 
 7. Extra Credit (30 pts)
-https://join.slack.com/t/cloud-hw2/shared_invite/zt-yh18x9oy-PwvUZnK0qJALSKJ
-KFiIsog
+https://join.slack.com/t/cloud-hw2/shared_invite/zt-yh18x9oy-PwvUZnK0qJALSKJKFiIsog
+● Head over to https://api.slack.com/apps and create a new app
+hw2-extra-credit
+● Create a incoming webhook
+Created
+● Head over to slash commands and create a new command, e.g., /coen241, set the
+request url to the public endpoint of your function:
+http://http://ec2-54-215-117-138.us-west-1.compute.amazonaws.com/:8080/function/slack-request
+/coen241
+● Head over to interactive components, set the request url for the interactivity:
+http://http://ec2-54-215-117-138.us-west-1.compute.amazonaws.com/:8080/function/slack-interactive
