@@ -62,7 +62,7 @@ c. The difference is h1-h2 takes less time than h1-h8. This is because for h1-h2
 3.
 a. “iperf” tests the maximum network bandwidth by measuring how much data can be transferred between two nodes within a given time frame. This is also known as throughput.
 b. h1-h2: 8.01 Mbits/sec, h2-h1: 9.27 Mbits/sec | h1-h8: 4.63 Mbits/sec, h8-h1: 5.46 Mbits/sec
-c. The throughput for h1-h2 is larger than h1-h8. As h1-h2 only needs to go through one switch, it takes the packets a shorter time to be transferred, so more packets can be transferred within a given time frame. h1-h8 will have to go through switches s3, s2, s1, s5, and s7,
+c. The throughput for h1-h2 is larger than h1-h8. As h1-h2 only needs to go through one switch, it takes the packets a shorter time to be transferred, so more packets can be transferred within a given time frame. h1-h8 will have to go through switches s3, s2, s1, s5, and s7.
 
 4.
 All of the switches observe traffic for h1-h2 and h1-h8. I put in ‘print(“PACK IN:”, self.connection)’ in the _handle_PacketIn function to see this.
